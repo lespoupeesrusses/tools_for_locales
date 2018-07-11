@@ -17,7 +17,7 @@ namespace :tools_for_locales do
       rescue
         # revert
         puts '>> revert changes'
-        file.puts yaml.to_yaml
+        file.puts yaml.to_yaml(line_width: -1)
         file.close
       end
     end
