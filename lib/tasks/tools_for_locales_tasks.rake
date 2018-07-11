@@ -12,7 +12,7 @@ namespace :tools_for_locales do
       yaml = YAML::load(File.open(file))
       file = File.new(file, "w")
       begin
-        file.puts sort_hash(yaml).to_yaml
+        file.puts sort_hash(yaml).to_yaml(line_width: -1)
         file.close
       rescue
         # revert
